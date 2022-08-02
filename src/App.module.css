@@ -1,0 +1,50 @@
+.flexbox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.flexbox h2 {
+	align-self: center;
+	text-transform: uppercase;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(359deg, #D4FFEC 5.94%, #57F2CC 21.55%, #4596FB 94.06%);
+	display: flex;
+    flex-direction: column;
+}
+
+.svg {
+	align-self: center;
+}
+
+.container h1 {
+	text-align: center;
+}
+
+body {
+	margin: 0 !important;
+}
+
+.flexbox > div {
+    display: flex;
+    flex-direction: column;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 0.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 30px;
+    width: 400px;
+    height: 400px;
+}
+
+.tableContainer {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}

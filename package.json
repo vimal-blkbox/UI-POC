@@ -1,0 +1,37 @@
+{
+  "name": "blkbox-ui",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emoji-mart/data": "^1.0.3",
+    "@emoji-mart/react": "^1.0.0",
+    "emoji-mart": "^5.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite-plugin-svgr": "^2.2.1",
+    "@svgr/core": "^6.2.1",
+    "esbuild": "^0.14.50",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "postcss-preset-env": "^7.7.2",
+    "vite": "^3.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 4 version"
+    ]
+  }
+}
