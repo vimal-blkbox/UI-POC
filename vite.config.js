@@ -1,8 +1,11 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import viteSvgr from 'vite-plugin-svgr';
+import { resolve } from 'path';
+import alias from '@rollup/plugin-alias';
 
-// https://vitejs.dev/config/
+const projectRootDir = resolve(__dirname);
+
 export default defineConfig(({ command, mode }) => {
   const isDevMode = mode === 'development';
 
@@ -11,11 +14,18 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins: [
+      alias(),
       react(),
       viteSvgr({
         exportAsDefault: true,
       }),
     ],
+    resolve: {
+      alias: {
+        '@': resolve(projectRootDir, 'src'),
+        common: resolve(projectRootDir, 'src/common'),
+      },
+    },
     server: {
       port: 3000,
     },

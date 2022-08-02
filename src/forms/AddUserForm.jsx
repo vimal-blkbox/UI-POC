@@ -2,7 +2,7 @@ import React, { useState, Suspense } from 'react';
 import styles from './AddUserForm.module.css';
 import SmileyLogo from '../assets/smiley.svg';
 import data from '@emoji-mart/data';
-import ErrorBoundary from '../common/ErrorBoundary';
+import ErrorBoundary from 'common/ErrorBoundary';
 
 const Picker = React.lazy(() => import('@emoji-mart/react'));
 

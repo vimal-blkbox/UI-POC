@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react';
-import AddUserForm from './forms/AddUserForm';
-import EditUserForm from './forms/EditUserForm';
-import UserTable from './tables/UserTable';
-import styles from './App.module.css';
-import UserLogo from './assets/user.svg';
+import AddUserForm from '@/forms/AddUserForm';
+import EditUserForm from '@/forms/EditUserForm';
+import UserTable from '@/tables/UserTable';
+import styles from '@/App.module.css';
+import UserLogo from '@/assets/user.svg';
 
 const App = () => {
   // Data
