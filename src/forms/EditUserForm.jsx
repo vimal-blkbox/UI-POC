@@ -23,12 +23,14 @@ const EditUserForm = (props) => {
       }}
     >
       <label>Name</label>
-      <input
-        type="text"
-        name="name"
-        value={user.name}
-        onChange={handleInputChange}
-      />
+      <div className={styles.inputContainer}>
+        <input
+          type="text"
+          name="name"
+          value={user.name}
+          onChange={handleInputChange}
+        />
+      </div>
       <label>Username</label>
       <input
         type="text"

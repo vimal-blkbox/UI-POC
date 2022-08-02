@@ -13,9 +13,10 @@
 .container {
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(359deg, #D4FFEC 5.94%, #57F2CC 21.55%, #4596FB 94.06%);
+	background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
 	display: flex;
     flex-direction: column;
+	overflow: auto;
 }
 
 .svg {
@@ -41,6 +42,7 @@ body {
     padding: 30px;
     width: 400px;
     height: 400px;
+	overflow: visible;
 }
 
 .tableContainer {

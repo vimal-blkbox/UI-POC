@@ -1,13 +1,9 @@
-import React, { useState, Fragment, Suspense } from 'react';
+import React, { useState, Fragment } from 'react';
 import AddUserForm from './forms/AddUserForm';
 import EditUserForm from './forms/EditUserForm';
 import UserTable from './tables/UserTable';
 import styles from './App.module.css';
-import ReactLogo from './assets/react.svg';
-import data from '@emoji-mart/data';
-import ErrorBoundary from './common/ErrorBoundary';
-
-const Picker = React.lazy(() => import('@emoji-mart/react'));
+import UserLogo from './assets/user.svg';
 
 const App = () => {
   // Data
@@ -23,8 +19,6 @@ const App = () => {
   const [users, setUsers] = useState(usersData);
   const [currentUser, setCurrentUser] = useState(initialFormState);
   const [editing, setEditing] = useState(false);
-
-  const [openEmoji, setOpenEmoji] = useState(false);
 
   // CRUD operations
   const addUser = (user) => {
@@ -50,17 +44,9 @@ const App = () => {
     setCurrentUser({ id: user.id, name: user.name, username: user.username });
   };
 
-  const openEmojiDrawer = () => {
-    setOpenEmoji(!openEmoji);
-  };
-
-  const onEmojiSelect = (data) => {
-    console.log(data);
-  };
-
   return (
     <div className={styles.container}>
-      <ReactLogo className={styles.svg} />
+      <UserLogo className={styles.svg} />
       <h1>USER MANAGEMENT</h1>
       <div className={styles.flexbox}>
         <div>
@@ -92,12 +78,6 @@ const App = () => {
           </div>
         </div>
       </div>
-      {/* <button onClick={openEmojiDrawer}>Open Emoji</button> */}
-      <ErrorBoundary>
-        <Suspense fallback={<div>Loading...</div>}>
-          {openEmoji && <Picker data={data} onEmojiSelect={onEmojiSelect} />}
-        </Suspense>
-      </ErrorBoundary>
     </div>
   );
 };
