@@ -1,8 +1,13 @@
 import React, { useState, Suspense } from 'react';
 import styles from './AddUserForm.module.css';
-import SmileyLogo from '../assets/smiley.svg';
+import SmileyLogo from 'assets/smiley.svg';
 import data from '@emoji-mart/data';
 import ErrorBoundary from 'common/ErrorBoundary';
+import {
+  Button,
+  BUTTON_SIZES,
+  BUTTON_TYPES,
+} from '../components/button/Button';
 
 const Picker = React.lazy(() => import('@emoji-mart/react'));
 
@@ -28,16 +33,16 @@ const AddUserForm = (props) => {
     openEmojiDrawer();
   };
 
-  return (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault();
-        if (!user.name || !user.username) return;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!user.name || !user.username) return;
 
-        props.addUser(user);
-        setUser(initialFormState);
-      }}
-    >
+    props.addUser(user);
+    setUser(initialFormState);
+  };
+
+  return (
+    <form>
       <label>Name</label>
       <div className={styles.inputContainer}>
         <input
@@ -69,7 +74,13 @@ const AddUserForm = (props) => {
         value={user.username}
         onChange={handleInputChange}
       />
-      <button>Submit</button>
+      <Button
+        size={BUTTON_SIZES.SMALL}
+        type={BUTTON_TYPES.PRIMARY}
+        onClick={handleSubmit}
+      >
+        Submit
+      </Button>
     </form>
   );
 };

@@ -1,0 +1,198 @@
+:root {
+    --primary-25: #F5FAFF;
+    --primary-50: #EFF8FF;
+    --primary-100: #D1E9FF;
+    --primary-200: #B2DDFF;
+    --primary-300: #84CAFF;
+    --primary-400: #53B1FD;
+    --primary-500: #2E90FA;
+    --primary-600: #2682F5;
+    --primary-700: #175CD3;
+    --primary-800: #1849A9;
+    --primary-900: #194185;
+
+    --warning-25: #FFFCF5;
+    --warning-50: #FFFAEB;
+    --warning-100: #FEF0C7;
+    --warning-200: #FEDF89;
+    --warning-300: #FEC84B;
+    --warning-400: #FDB022;
+    --warning-500: #F79009;
+    --warning-600: #DC6803;
+    --warning-700: #B54708;
+    --warning-800: #93370D;
+    --warning-900: #7A2E0E;
+
+    --error-25: #FFFBFA;
+    --error-50: #FEF3F2;
+    --error-100: #FEE4E2;
+    --error-200: #FECDCA;
+    --error-300: #FDA29B;
+    --error-400: #F97066;
+    --error-500: #F04438;
+    --error-600: #D92D20;
+    --error-700: #B42318;
+    --error-800: #912018;
+    --error-900: #7A271A;
+
+    --success-25: #F6FEF9;
+    --success-50: #ECFDF3;
+    --success-100: #D1FADF;
+    --success-200: #A6F4C5;
+    --success-300: #6CE9A6;
+    --success-400: #32D583;
+    --success-500: #12B76A;
+    --success-600: #039855;
+    --success-700: #027A48;
+    --success-800: #05603A;
+    --success-900: #054F31;
+
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    
+    --font-size-36: 3.6rem;
+    --font-size-32: 3.2rem;
+    --font-size-28: 2.8rem;
+    --font-size-24: 2.4rem;
+    --font-size-20: 2rem;
+    --font-size-18: 1.8rem;
+    --font-size-16: 1.6rem;
+    --font-size-14: 1.4rem;
+    --font-size-13: 1.3rem;
+    --font-size-12: 1.2rem;
+    --font-size-11: 1.1rem;
+    --font-size-10: 1rem;
+
+    --text-color: #ffffff;
+    --bg-white: #ffffff;
+
+    --grey-3: #0D1829;
+    --grey-4:#6B7280;
+}
+
+
+.button {
+    padding: 12px 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Button Type CSS **/
+
+.button:global(.primary) {
+    background-color: var(--primary-600);
+    color: var(--text-color);
+}
+
+.button:global(.secondary) {
+    background-color: var(--bg-white);
+    color: var(--grey-3);
+    border: 1px solid rgba(233, 235, 238, 0.08);
+    box-shadow: 0px 0px 2px rgba(18, 40, 44, 0.12), 0px 2px 4px rgba(18, 40, 44, 0.1);
+}
+
+.button:global(.outline) {
+    background-color: var(--bg-white) !important;
+    color: var(--grey-4);
+    border: 1px solid #E9EBEE;
+}
+
+.button:global(.plain) {
+    background: none;
+    color: var(--grey-4);
+    text-decoration: underline;
+}
+
+.button:global(.warning) {
+    background-color: var(--warning-600);
+    color: var(--text-color);
+}
+
+.button:global(.danger) {
+    background-color: var(--error-600);
+    color: var(--text-color);
+}
+
+.button:global(.success) {
+    background-color: var(--success-600);
+    color: var(--text-color);
+}
+
+/** Button Size CSS **/
+
+.button:global(.small) {
+    width: 82px;
+    height: 40px;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-500);
+}
+
+.button:global(.medium) {
+    width: 89px;
+    height: 41px;
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-500);
+}
+
+.button:global(.large) {
+    width: 94px;
+    height: 44;
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-500);
+}
+
+.button:global(.xlarge) {
+    width: 101px;
+    height: 46px;
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-500);
+}
+
+.button:global(.fullWidth) {
+    width: 100%;
+}
+
+
+/** Button icon svg CSS **/
+
+.buttonIcon {
+    padding-right: 8px;
+}
+
+.button:global(.primary) .buttonIcon svg,
+.button:global(.plain) .buttonIcon svg,
+.button:global(.warning) .buttonIcon svg,
+.button:global(.danger) .buttonIcon svg,
+.button:global(.success) .buttonIcon svg {
+    fill: var(--text-color);
+}
+
+.button:global(.secondary) .buttonIcon svg,
+.button:global(.outline) .buttonIcon svg {
+    fill: var(--grey-4);
+}
+
+.button:global(.xlarge) .buttonIcon svg {
+    width: 20px;
+    height: 20px;
+}
+.button:global(.large) .buttonIcon svg {
+    width: 20px;
+    height: 20px;
+}
+.button:global(.medium) .buttonIcon svg {
+    width: 18px;
+    height: 18px;
+}
+.button:global(.small) .buttonIcon svg {
+    width: 16px;
+    height: 16px;
+}

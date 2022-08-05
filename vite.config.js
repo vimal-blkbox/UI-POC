@@ -24,6 +24,7 @@ export default defineConfig(({ command, mode }) => {
       alias: {
         '@': resolve(projectRootDir, 'src'),
         common: resolve(projectRootDir, 'src/common'),
+        assets: resolve(projectRootDir, 'src/assets'),
       },
     },
     server: {
